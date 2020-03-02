@@ -9,7 +9,7 @@
 <div id="app">
     <h1>{{ count }}</h1>
     <button @click="reduceCounter">-</button>
-    <button>+</button>
+    <button @click="increaseCounter">+</button>
 
 </div>
 
@@ -25,7 +25,11 @@
         methods: {
             reduceCounter: function () {
 
-                console.log('reduce counter function was called.')
+                this.count--
+            },
+            increaseCounter: function () {
+
+                this.count++
             }
         }
     })
