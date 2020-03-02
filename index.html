@@ -9,8 +9,9 @@
 <div id="app">
     <h1>{{ count }}</h1>
     <button @click="reduceCounter">-</button>
-    <button @click="increaseCounter">+</button>
-
+    <button v-on:click="addCounter">+</button>
+    <p v-if="count % 2 === 0">The current count is even</p>
+    <p v-else>The current count is odd</p>
 </div>
 
     <!-- development version, includes helpful console warnings -->
@@ -27,7 +28,7 @@
 
                 this.count--
             },
-            increaseCounter: function () {
+            addCounter: function () {
 
                 this.count++
             }
