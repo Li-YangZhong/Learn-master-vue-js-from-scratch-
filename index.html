@@ -6,19 +6,18 @@
     <title>Vuejs Beginners</title>
 </head>
 <body>
-    
-    <footer id="footer">
-        <p>copyright {{date.getFullYear()}}</p>
-    </footer>
+<div id="app">
+    <h1>{{ count }}</h1>
+</div>
 
     <!-- development version, includes helpful console warnings -->
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 <script>
     new Vue({
-        el: '#footer',
+        el: '#app',
         data: {
-            date: new Date()
+            count: 0
         }
     })
 </script>
